@@ -6,3 +6,9 @@ Running the server.py file sets up a server socket that can
 - updates leaderboard and useres to databases in mysql server
 - can send and recieve strings and objects (dictionaries) for the QnA purposes.
 
+To run the sql server in docker seperately while testing the python file, the following can be run in terminal
+
+```
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3333:3306 -d mysql:latest
+```
+
