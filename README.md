@@ -11,4 +11,11 @@ To run the sql server in docker seperately while testing the python file, the fo
 ```
 docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3333:3306 -d mysql:latest
 ```
+## Forensics- steganography
 
+Using kali-linux on arm64 meant compiling issues when running the file and execution errors like `file cannot be added` or `image not supported` even if format was supported. Hence stegosuite used for arm-compatibility.
+following commands run:
+```
+stegosuite embed -m the message i want in the file -f samply.txt -o mystery.jpg -k mukund
+```
+Here, samply.txt is the text file to be embedded, mystery.jpg is the file into which it is embedded and mukund is the key phrase needed to extract the file back.
